@@ -1,5 +1,5 @@
-<h1>Test API REST for authenticate users</h1>
-### Usage example
+<h1>Test API REST for authenticate users (Usage example) </h1>
+
 <p>
     <b>POST - Sign Up</b> [ <i>https://api-auth-user.herokuapp.com/api/signup</i> ]
 </p>
