@@ -14,11 +14,7 @@ class AuthController extends Controller
      */
     public function signUp(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|string|email|unique:users',
-            'password' => 'required|string'
-        ]);
+        $request->validate(User::$rulesSignUp);
 
         User::create([
             'name' => $request->name,
@@ -36,11 +32,7 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-        $request->validate([
-            'email' => 'required|string|email',
-            'password' => 'required|string',
-            'remember_me' => 'boolean'
-        ]);
+        $request->validate(User::$rulesLogIn);
 
         $credentials = request(['email', 'password']);
 
