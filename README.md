@@ -1,4 +1,5 @@
 <h1>Test API REST for authenticate users</h1>
+### Usage example
 <p>
     <b>POST - Sign Up</b> [ <i>https://api-auth-user.herokuapp.com/api/signup</i> ]
 </p>
@@ -41,17 +42,19 @@
 </p>
 
 
-       //Request Body
-       {
-           "name":"test",
-           "email":"test@gmail.com",
-           "password":"test"
-       }
+       //Request Header
+        Content-Type : application/json
+        X-Requested-With: XMLHttpRequest
+        Authorization: Bearer [Token]'
 
        //Backend Response 
-
        {
-           "message": "Successfully created user!"
+             "id": 4,
+             "name": "test",
+             "email": "teest@gmail.com",
+             "email_verified_at": null,
+             "created_at": "2020-10-22T17:04:34.000000Z",
+             "updated_at": "2020-10-22T17:04:34.000000Z"
        }
 
 
@@ -60,15 +63,13 @@
 </p>
                 
 
-       //Request Body
-       {
-           "name":"test",
-           "email":"test@gmail.com",
-           "password":"test"
-       }
+       //Request Header
+         Content-Type : application/json
+         X-Requested-With: XMLHttpRequest
+         Authorization: Bearer [Token]'
 
        //Backend Response 
 
        {
-           "message": "Successfully created user!"
+         "message": "Successfully logged out"
        }
